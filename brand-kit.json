@@ -162,13 +162,13 @@
             "variant": "dark",
             "format": "png",
             "background": "transparent",
-            "file": "logos/__TheCreek-Logo-Main-Horizontal-Black.png"
+            "file": "logos/TheCreek-Logo-Main-Horizontal-Black.png"
           },
           {
             "variant": "light",
             "format": "png",
             "background": "transparent",
-            "file": "logos/__TheCreek-Logo-Main-Horizontal-White.png"
+            "file": "logos/TheCreek-Logo-Main-Horizontal-White.png"
           }
         ]
       },
@@ -180,13 +180,13 @@
             "variant": "dark",
             "format": "png",
             "background": "transparent",
-            "file": "logos/__TheCreek-Logo-Main-Stacked-Black.png"
+            "file": "logos/TheCreek-Logo-Main-Stacked-Black.png"
           },
           {
             "variant": "light",
             "format": "png",
             "background": "transparent",
-            "file": "logos/__TheCreek-Logo-Main-Stacked-White.png"
+            "file": "logos/TheCreek-Logo-Main-Stacked-White.png"
           }
         ]
       },
@@ -198,13 +198,13 @@
             "variant": "dark",
             "format": "png",
             "background": "transparent",
-            "file": "logos/__TheCreek-Logo-SecondaryIcon-Black.png"
+            "file": "logos/TheCreek-Logo-SecondaryIcon-Black.png"
           },
           {
             "variant": "light",
             "format": "png",
             "background": "transparent",
-            "file": "logos/__TheCreek-Logo-SecondaryIcon-White.png"
+            "file": "logos/TheCreek-Logo-SecondaryIcon-White.png"
           }
         ]
       },
@@ -216,13 +216,13 @@
             "variant": "dark",
             "format": "png",
             "background": "transparent",
-            "file": "logos/__TheCreek-Logo-SecondaryV2-Horizontal-Black.png"
+            "file": "logos/TheCreek-Logo-SecondaryV2-Horizontal-Black.png"
           },
           {
             "variant": "light",
             "format": "png",
             "background": "transparent",
-            "file": "logos/__TheCreek-Logo-SecondaryV2-Horizontal-White.png"
+            "file": "logos/TheCreek-Logo-SecondaryV2-Horizontal-White.png"
           }
         ]
       },
@@ -234,13 +234,13 @@
             "variant": "dark",
             "format": "png",
             "background": "transparent",
-            "file": "logos/__TheCreek-Logo-SecondaryV2-Stacked-Black.png"
+            "file": "logos/TheCreek-Logo-SecondaryV2-Stacked-Black.png"
           },
           {
             "variant": "light",
             "format": "png",
             "background": "transparent",
-            "file": "logos/__TheCreek-Logo-SecondaryV2-Stacked-White.png"
+            "file": "logos/TheCreek-Logo-SecondaryV2-Stacked-White.png"
           }
         ]
       }
@@ -276,28 +276,49 @@
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/life-groups/__Creek-LifeGroups-Logo-FULL-Black.png"
+            "file": "ministries/life-groups/Creek-LifeGroups-Logo-FULL-Black.png"
           },
           {
             "variant": "light",
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/life-groups/__Creek-LifeGroups-Logo-FULL-White.png"
+            "file": "ministries/life-groups/Creek-LifeGroups-Logo-FULL-White.png"
+          },
+          {
+            "variant": "full",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/life-groups/Creek-LifeGroups-Logo-FULLv1-01.png"
           },
           {
             "variant": "dark",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/life-groups/__Creek-LifeGroups-Logo-WORD-Black.png"
+            "file": "ministries/life-groups/Creek-LifeGroups-Logo-WORD-Black.png"
           },
           {
             "variant": "light",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/life-groups/__Creek-LifeGroups-Logo-WORD-White.png"
+            "file": "ministries/life-groups/Creek-LifeGroups-Logo-WORD-White.png"
+          },
+          {
+            "variant": "full-accent",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/life-groups/Creek-LifeGroups-Logo-WORDv1.png"
+          },
+          {
+            "variant": "full-accent-words",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/life-groups/Creek-LifeGroups-Logo-WORDv2.png"
           }
         ]
       }
@@ -321,28 +342,49 @@
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/marriage-parenting/__Creek-Marriage+Parenting-Logo-FULL-Black.png"
+            "file": "ministries/marriage-parenting/Creek-Marriage+Parenting-Logo-FULL-Black.png"
           },
           {
             "variant": "light",
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/marriage-parenting/__Creek-Marriage+Parenting-Logo-FULL-White.png"
+            "file": "ministries/marriage-parenting/Creek-Marriage+Parenting-Logo-FULL-White.png"
+          },
+          {
+            "variant": "full",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/marriage-parenting/Creek-Marriage+Parenting-Logo-FULLv2.png"
           },
           {
             "variant": "dark",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/marriage-parenting/__Creek-Marriage+Parenting-WORD-Black.png"
+            "file": "ministries/marriage-parenting/Creek-Marriage+Parenting-WORD-Black.png"
           },
           {
             "variant": "light",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/marriage-parenting/__Creek-Marriage+Parenting-WORD-White.png"
+            "file": "ministries/marriage-parenting/Creek-Marriage+Parenting-WORD-White.png"
+          },
+          {
+            "variant": "full-accent",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/marriage-parenting/Creek-Marriage-Parenting-WORD-v1.png"
+          },
+          {
+            "variant": "full-accent-words",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/marriage-parenting/Creek-Marriage+Parenting-Logo-FULLv2.png"
           }
         ]
       }
@@ -366,28 +408,49 @@
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/mens-formation/__Creek-MensFormation-Logo-FULL-Black.png"
+            "file": "ministries/mens-formation/Creek-MensFormation-Logo-FULL-Black.png"
           },
           {
             "variant": "light",
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/mens-formation/__Creek-MensFormation-Logo-FULL-White.png"
+            "file": "ministries/mens-formation/Creek-MensFormation-Logo-FULL-White.png"
+          },
+          {
+            "variant": "full",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/mens-formation/Creek-MensFormation-Logo-FULLv1.png"
           },
           {
             "variant": "dark",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/mens-formation/__Creek-MensFormation-WORD-Black.png"
+            "file": "ministries/mens-formation/Creek-MensFormation-WORD-Black.png"
           },
           {
             "variant": "light",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/mens-formation/__Creek-MensFormation-WORD-White.png"
+            "file": "ministries/mens-formation/Creek-MensFormation-WORD-White.png"
+          },
+          {
+            "variant": "full-accent",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/mens-formation/Creek-MensFormation-WORD-v1.png"
+          },
+          {
+            "variant": "full-accent-words",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/mens-formation/Creek-MensFormation-WORD-v2.png"
           }
         ]
       }
@@ -411,28 +474,49 @@
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/womens-formation/__Creek-WomensFormation-Logo-FULL-Black.png"
+            "file": "ministries/womens-formation/Creek-WomensFormation-Logo-FULL-Black.png"
           },
           {
             "variant": "light",
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/womens-formation/__Creek-WomensFormation-Logo-FULL-White.png"
+            "file": "ministries/womens-formation/Creek-WomensFormation-Logo-FULL-White.png"
+          },
+          {
+            "variant": "full",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/womens-formation/Creek-WomensFormation-Logo-FULLv1.png"
           },
           {
             "variant": "dark",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/womens-formation/__Creek-WomensFormation-WORD-FULL-Black.png"
+            "file": "ministries/womens-formation/Creek-WomensFormation-WORD-FULL-Black.png"
           },
           {
             "variant": "light",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/womens-formation/__Creek-WomensFormation-WORD-FULL-White.png"
+            "file": "ministries/womens-formation/Creek-WomensFormation-WORD-FULL-White.png"
+          },
+          {
+            "variant": "full-accent",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/womens-formation/Creek-WomensFormation-WORD-FULLv1.png"
+          },
+          {
+            "variant": "full-accent-words",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/womens-formation/Creek-WomensFormation-WORD-FULLv2.png"
           }
         ]
       }
@@ -456,28 +540,49 @@
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/outreach/__Creek-Outreach-Logo-FULL-Black.png"
+            "file": "ministries/outreach/Creek-Outreach-Logo-FULL-Black.png"
           },
           {
             "variant": "light",
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/outreach/__Creek-Outreach-Logo-FULL-White.png"
+            "file": "ministries/outreach/Creek-Outreach-Logo-FULL-White.png"
+          },
+          {
+            "variant": "full",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/outreach/Creek-Outreach-Logo-FULLv1.png"
           },
           {
             "variant": "dark",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/outreach/__Creek-Outreach-Logo-WORD-Black.png"
+            "file": "ministries/outreach/Creek-Outreach-Logo-WORD-Black.png"
           },
           {
             "variant": "light",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/outreach/__Creek-Outreach-Logo-WORD-White.png"
+            "file": "ministries/outreach/Creek-Outreach-Logo-WORD-White.png"
+          },
+          {
+            "variant": "full-accent",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/outreach/Creek-Outreach-Logo-WORDv1.png"
+          },
+          {
+            "variant": "full-accent-words",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/outreach/Creek-Outreach-Logo-WORDv2.png"
           }
         ]
       }
@@ -501,28 +606,49 @@
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/safety-security/__Creek-Safety+Security-Logo-FULL-Black.png"
+            "file": "ministries/safety-security/Creek-Safety+Security-Logo-FULL-Black.png"
           },
           {
             "variant": "light",
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/safety-security/__Creek-Safety+Security-Logo-FULL-White.png"
+            "file": "ministries/safety-security/Creek-Safety+Security-Logo-FULL-White.png"
+          },
+          {
+            "variant": "full",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/safety-security/Creek-Safety+Security-Logo-FULLv1.png"
           },
           {
             "variant": "dark",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/safety-security/__Creek-Safety+Security-WORD-FULL-Black.png"
+            "file": "ministries/safety-security/Creek-Safety+Security-WORD-FULL-Black.png"
           },
           {
             "variant": "light",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/safety-security/__Creek-Safety+Security-WORD-FULL-White.png"
+            "file": "ministries/safety-security/Creek-Safety+Security-WORD-FULL-White.png"
+          },
+          {
+            "variant": "full-accent",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/safety-security/Creek-Safety+Security-WORD-FULLv1.png"
+          },
+          {
+            "variant": "full-accent-words",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/safety-security/Creek-Safety+Security-WORD-FULLv2.png"
           }
         ]
       }
@@ -546,28 +672,49 @@
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/special-needs/__Creek-SpecialNeeds-Logo-FULL-Black.png"
+            "file": "ministries/special-needs/Creek-SpecialNeeds-Logo-FULL-Black.png"
           },
           {
             "variant": "light",
             "layout": "combination_mark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/special-needs/__Creek-SpecialNeeds-Logo-FULL-White.png"
+            "file": "ministries/special-needs/Creek-SpecialNeeds-Logo-FULL-White.png"
+          },
+          {
+            "variant": "full",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/special-needs/Creek-SpecialNeeds-Logo-FULLv1.png"
           },
           {
             "variant": "dark",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/special-needs/__Creek-SpecialNeeds-WORD-FULL-Black.png"
+            "file": "ministries/special-needs/Creek-SpecialNeeds-WORD-FULL-Black.png"
           },
           {
             "variant": "light",
             "layout": "wordmark",
             "format": "png",
             "background": "transparent",
-            "file": "ministries/special-needs/__Creek-SpecialNeeds-WORD-FULL-White.png"
+            "file": "ministries/special-needs/Creek-SpecialNeeds-WORD-FULL-White.png"
+          },
+          {
+            "variant": "full-accent",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/special-needs/Creek-SpecialNeeds-WORD-FULLv1.png"
+          },
+          {
+            "variant": "full-accent-words",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/special-needs/Creek-SpecialNeeds-WORD-FULLv2.png"
           }
         ]
       }
@@ -596,8 +743,8 @@
     "Logos must only appear in black or white. Use the dark (black) variant on light backgrounds; the light (white) variant on dark backgrounds.",
     "The horizontal combination mark is always preferred. Use stacked only when horizontal space is limited.",
     "Font hierarchy: Gotham Bold for headlines/CTAs, Bebas Neue Pro for subheadings, Avenir for body copy. Portrait Script is decorative only — never use for readable copy.",
-    "For ministry-specific designs, use the ministry's accent_color as the supporting color alongside black and white.",
-    "For external-facing materials, always pair ministry logos with The Creek logo mark. For internal communications, The Creek logo mark is optional.",
+    "For ministry-specific designs, use the ministry's accent_color as the supporting color alongside black and white. Logos with the full, full-accent and full-accent-words variant include the accent_color.",
+    "For external-facing materials, always pair ministry logos with The Creek logo mark. These are the combination_mark logos. For internal communications, The Creek logo mark is optional. For these use the wordmark logos.",
     "When in doubt, include The Creek logo mark."
   ]
 }
