@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Creek Brand Kit</title>
+  <style>
+    @font-face {
+      font-family: 'Gotham';
+      src: url('fonts/Gotham Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Bebas Neue Pro';
+      src: url('fonts/Bebas Neue Pro Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Avenir';
+      src: url('fonts/Avenir Regular.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Portrait Script';
+      src: url('fonts/portrait-script-regular_WebFont.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #231F20;
+      --black-soft: #3A3637;
+      --dark-gray: #6D6E71;
+      --medium-gray: #A7A9AC;
+      --patina: #598D7F;
+      --nepal: #95B1C1;
+      --solid-pink: #984445;
+      --tan-hide: #F79A70;
+      --white: #FFFFFF;
+      --off-white: #F8F8F8;
+      --light-gray: #E5E5E5;
+      --text-muted: #6D6E71;
+    }
+
+    body {
+      font-family: 'Avenir', system-ui, sans-serif;
+      font-weight: 400;
+      background: var(--off-white);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--black);
+      padding: 20px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-area img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .nav-link {
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--medium-gray);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid var(--black-soft);
+      padding: 6px 14px;
+      border-radius: 4px;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .nav-link:hover {
+      background: var(--patina);
+      color: var(--white);
+      border-color: var(--patina);
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--black);
+      padding: 72px 48px;
+      color: var(--white);
+      border-bottom: 3px solid var(--patina);
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-inner {
+      max-width: 960px;
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--patina);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: var(--medium-gray);
+      max-width: 600px;
+      line-height: 1.75;
+    }
+
+    /* AGENT CALLOUT */
+    .agent-callout {
+      background: var(--black-soft);
+      border-top: 1px solid var(--patina);
+      padding: 32px 48px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .agent-callout-inner {
+      max-width: 960px;
+      width: 100%;
+    }
+
+    .agent-callout h2 {
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--patina);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .agent-callout p {
+      font-size: 15px;
+      color: var(--medium-gray);
+      max-width: 800px;
+      line-height: 1.75;
+    }
+
+    .agent-callout code {
+      font-family: 'Courier New', monospace;
+      background: var(--black);
+      color: var(--teal-light);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 13px;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 64px 48px;
+    }
+
+    section {
+      margin-bottom: 72px;
+    }
+
+    .section-eyebrow {
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--patina);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    section h2 {
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--light-gray);
+      letter-spacing: -0.01em;
+    }
+
+    section p.section-note {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    /* FILE CARDS */
+    .file-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .file-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      padding: 24px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .file-card:hover {
+      border-color: var(--patina);
+      box-shadow: 0 4px 16px rgba(89, 141, 127, 0.12);
+    }
+
+    .file-card-path {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: var(--patina);
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .file-card h3 {
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .file-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .tag {
+      display: inline-block;
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 20px;
+      margin-top: 12px;
+      background: rgba(89, 141, 127, 0.1);
+      color: var(--patina);
+    }
+
+    /* SCHEMA TABLE */
+    .schema-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .schema-table thead tr {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .schema-table thead th {
+      padding: 12px 16px;
+      text-align: left;
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .schema-table tbody tr {
+      border-bottom: 1px solid var(--light-gray);
+      background: var(--white);
+    }
+
+    .schema-table tbody tr:nth-child(even) {
+      background: var(--off-white);
+    }
+
+    .schema-table td {
+      padding: 12px 16px;
+      vertical-align: top;
+    }
+
+    .schema-table td:first-child {
+      font-family: 'Courier New', monospace;
+      color: var(--patina);
+      font-size: 13px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .schema-table td:last-child {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      background: var(--light-gray);
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-size: 12px;
+      color: var(--black);
+    }
+
+    /* COLOR SWATCHES */
+    .color-group {
+      margin-bottom: 32px;
+    }
+
+    .color-group-label {
+      font-family: 'Bebas Neue Pro', system-ui, sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .color-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .swatch {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: 6px;
+      padding: 10px 14px;
+    }
+
+    .swatch-dot {
+      width: 32px;
+      height: 32px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .swatch-info strong {
+      display: block;
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--black);
+    }
+
+    .swatch-info span {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* TYPOGRAPHY SPECIMENS */
+    .type-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .type-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      padding: 28px 24px 20px;
+    }
+
+    .type-specimen {
+      font-size: 32px;
+      line-height: 1.2;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .type-meta {
+      border-top: 1px solid var(--light-gray);
+      padding-top: 14px;
+    }
+
+    .type-meta strong {
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--black);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .type-meta span {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      display: block;
+    }
+
+    .type-role {
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--patina);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    /* MINISTRY CARDS */
+    .ministry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .ministry-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .ministry-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .ministry-swatch {
+      height: 8px;
+    }
+
+    .ministry-body {
+      padding: 20px;
+    }
+
+    .ministry-body h3 {
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+
+    .ministry-body .ministry-id {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .ministry-accent-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ministry-accent-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      border: 1px solid rgba(0,0,0,0.08);
+      flex-shrink: 0;
+    }
+
+    .ministry-accent-hex {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .ministry-accent-name {
+      font-size: 12px;
+      color: var(--black);
+      font-weight: 400;
+    }
+
+    /* LOGO PREVIEWS */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .logo-card {
+      background: var(--white);
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .logo-preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 24px;
+      min-height: 120px;
+    }
+
+    .logo-preview.dark-bg {
+      background: var(--black);
+    }
+
+    .logo-preview.light-bg {
+      background: var(--off-white);
+    }
+
+    .logo-preview img {
+      max-height: 48px;
+      max-width: 100%;
+      width: auto;
+    }
+
+    .logo-card-meta {
+      padding: 14px 16px;
+      border-top: 1px solid var(--light-gray);
+    }
+
+    .logo-card-meta strong {
+      font-family: 'Gotham', system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--black);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .logo-card-meta span {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--black);
+      color: var(--dark-gray);
+      text-align: center;
+      padding: 32px 48px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--patina);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-area">
+      <img src="logos/__TheCreek-Logo-Main-Horizontal-White.png" alt="The Creek" />
+    </div>
+    <nav class="nav-links">
+      <a class="nav-link" href="brand-guidelines.md">Guidelines</a>
+      <a class="nav-link" href="brand-kit.json">brand-kit.json</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">thecreek.org / brand</p>
+      <h1>The Creek Brand Kit</h1>
+      <p>The single source of truth for The Creek's brand assets, colors, typography, and voice. Designed to be used by staff, designers, and AI tools to produce consistently on-brand work.</p>
+    </div>
+  </div>
+
+  <div class="agent-callout">
+    <div class="agent-callout-inner">
+      <h2>Agent Instructions</h2>
+      <p>
+        Start with <code>brand-kit.json</code> — it contains all structured brand data in a single machine-readable file. For tone, logo usage, and writing rules, read <code>brand-guidelines.md</code>. All asset paths in the JSON are relative to the brand kit root. When producing branded output, default to <strong>Black (#231F20)</strong> and <strong>White (#FFFFFF)</strong> as the primary colors. Use <strong>Gotham Bold</strong> for headlines and CTAs, <strong>Bebas Neue Pro</strong> for subheads, and <strong>Avenir</strong> for body copy. Prefer the horizontal combination mark logo in most contexts. For ministry-specific content, apply the ministry's <code>accent_color</code> from the <code>sub_brands</code> array alongside black and white.
+      </p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- KEY FILES -->
+    <section>
+      <p class="section-eyebrow">Repository</p>
+      <h2>Key Files</h2>
+      <div class="file-grid">
+
+        <div class="file-card">
+          <span class="file-card-path">brand-kit.json</span>
+          <h3>Brand Kit</h3>
+          <p>Machine-readable brand data. Contains colors, typography, logo paths, voice summary, ministry sub-brands, and usage rules. Start here.</p>
+          <span class="tag">Primary Reference</span>
+        </div>
+
+        <div class="file-card">
+          <span class="file-card-path">brand-guidelines.md</span>
+          <h3>Brand Guidelines</h3>
+          <p>Human and agent-readable guidelines covering tone of voice, logo usage rules, writing standards, formatting, and terminology.</p>
+          <span class="tag">Voice + Usage</span>
+        </div>
+
+        <div class="file-card">
+          <span class="file-card-path">logos/</span>
+          <h3>Logo Files</h3>
+          <p>PNG files for the horizontal combination mark (preferred), stacked combination mark, secondary icon, and secondary V2 variants. Each in black and white.</p>
+          <span class="tag">Assets</span>
+        </div>
+
+        <div class="file-card">
+          <span class="file-card-path">fonts/</span>
+          <h3>Brand Fonts</h3>
+          <p>Self-hosted font files: Gotham Bold (headers/CTAs), Bebas Neue Pro Regular (subheads), and Avenir Regular (body copy).</p>
+          <span class="tag">Typography</span>
+        </div>
+
+        <div class="file-card">
+          <span class="file-card-path">ministries/</span>
+          <h3>Ministry Logos</h3>
+          <p>Logo assets for all ministry sub-brands: Life Groups, Marriage + Parenting, Men's Formation, Women's Formation, Outreach, Safety + Security, and Special Needs Ministry.</p>
+          <span class="tag">Assets</span>
+        </div>
+
+        <div class="file-card">
+          <span class="file-card-path">guidelines/</span>
+          <h3>Style Guide PDFs</h3>
+          <p>The original The Creek style guide and ministry brand style guides. Reference for visual design decisions.</p>
+          <span class="tag">Reference</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- JSON SCHEMA -->
+    <section>
+      <p class="section-eyebrow">brand-kit.json</p>
+      <h2>JSON Schema</h2>
+      <table class="schema-table">
+        <thead>
+          <tr>
+            <th>Key</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>brand</td>
+            <td>Legal name (Indian Creek Christian Church), brand name (The Creek), and website URL.</td>
+          </tr>
+          <tr>
+            <td>locations</td>
+            <td>Primary campus address with lat/lng coordinates.</td>
+          </tr>
+          <tr>
+            <td>color_system.palette.primary</td>
+            <td>Black (#231F20) — main brand color. Includes RGB, CMYK, and text_on value.</td>
+          </tr>
+          <tr>
+            <td>color_system.palette.secondary</td>
+            <td>White (#FFFFFF) — co-primary. Used for logo reversal, backgrounds, and negative space.</td>
+          </tr>
+          <tr>
+            <td>color_system.palette.neutrals</td>
+            <td>Dark Gray (#6D6E71, Pantone 424 C) and Medium Gray (#A7A9AC, Pantone 7543 C) with Pantone and CMYK values.</td>
+          </tr>
+          <tr>
+            <td>color_system.palette.accents</td>
+            <td>Four accent colors: Blue (#95B1C1), Burgundy (#984445), Teal (#598D7F), Peach (#F79A70). Each with Pantone and text_on values.</td>
+          </tr>
+          <tr>
+            <td>color_system.interface</td>
+            <td>Five-step neutral scale (softest → strongest) with light and dark mode values for UI contexts.</td>
+          </tr>
+          <tr>
+            <td>color_system.semantic</td>
+            <td>Success, warning, danger, and info states — forecolor and background for light and dark modes.</td>
+          </tr>
+          <tr>
+            <td>typography.primary</td>
+            <td>Gotham Bold — logo wordmark, headlines, and CTAs. Self-hosted OTF.</td>
+          </tr>
+          <tr>
+            <td>typography.secondary</td>
+            <td>Bebas Neue Pro — subheadings. Self-hosted TTF.</td>
+          </tr>
+          <tr>
+            <td>typography.body</td>
+            <td>Avenir — body copy. Upper/lowercase only; never all caps. Self-hosted TTF.</td>
+          </tr>
+          <tr>
+            <td>typography.accent</td>
+            <td>Portrait Script — decorative accent only. Never for readable copy. Never all caps.</td>
+          </tr>
+          <tr>
+            <td>logos.lockups</td>
+            <td>Five lockup types (combination_mark_horizontal, combination_mark_stacked, logo_mark, secondary_horizontal, secondary_stacked). Each with dark and light variant PNG assets.</td>
+          </tr>
+          <tr>
+            <td>logos.rules</td>
+            <td>Logo usage rules: black or white only, preferred lockup order, clearspace, no alterations.</td>
+          </tr>
+          <tr>
+            <td>sub_brands</td>
+            <td>Seven ministry brands, each with a unique <code>accent_color</code> and logo assets (combination_mark and wordmark in dark/light). Includes logo usage rules for internal vs. external contexts.</td>
+          </tr>
+          <tr>
+            <td>voice</td>
+            <td>Brand voice summary, tone descriptors (warm, welcoming, clear, authentic, hopeful, community-focused), and language to avoid.</td>
+          </tr>
+          <tr>
+            <td>rules</td>
+            <td>Top-level rules array — the primary guardrails for AI agents and designers producing branded output.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- COLORS -->
+    <section>
+      <p class="section-eyebrow">Colors</p>
+      <h2>Brand Colors</h2>
+      <p class="section-note">Black and white are the primary brand colors. All other colors are secondary to them. Full values (hex, RGB, CMYK, Pantone) are in <code>brand-kit.json</code> under <code>color_system.palette</code>.</p>
+
+      <div class="color-group">
+        <p class="color-group-label">Primary</p>
+        <div class="color-row">
+          <div class="swatch">
+            <div class="swatch-dot" style="background: #231F20;"></div>
+            <div class="swatch-info">
+              <strong>Black</strong>
+              <span>#231F20</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-dot" style="background: #FFFFFF; border: 1px solid #E5E5E5;"></div>
+            <div class="swatch-info">
+              <strong>White</strong>
+              <span>#FFFFFF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-group">
+        <p class="color-group-label">Neutrals</p>
+        <div class="color-row">
+          <div class="swatch">
+            <div class="swatch-dot" style="background: #6D6E71;"></div>
+            <div class="swatch-info">
+              <strong>Dark Gray</strong>
+              <span>#6D6E71 · Pantone 424 C</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-dot" style="background: #A7A9AC;"></div>
+            <div class="swatch-info">
+              <strong>Medium Gray</strong>
+              <span>#A7A9AC · Pantone 7543 C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-group">
+        <p class="color-group-label">Accents</p>
+        <div class="color-row">
+          <div class="swatch">
+            <div class="swatch-dot" style="background: #95B1C1;"></div>
+            <div class="swatch-info">
+              <strong>Nepal</strong>
+              <span>#95B1C1 · Pantone 536 C</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-dot" style="background: #984445;"></div>
+            <div class="swatch-info">
+              <strong>Solid Pink</strong>
+              <span>#984445 · Pantone 7608 C</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-dot" style="background: #598D7F;"></div>
+            <div class="swatch-info">
+              <strong>Patina</strong>
+              <span>#598D7F · Pantone 625 C</span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-dot" style="background: #F79A70;"></div>
+            <div class="swatch-info">
+              <strong>Tan Hide</strong>
+              <span>#F79A70 · Pantone 163 C</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section>
+      <p class="section-eyebrow">Typography</p>
+      <h2>Brand Fonts</h2>
+      <p class="section-note">Font files are in <code>fonts/</code>. Full role and casing guidance is in <code>brand-kit.json</code> under <code>typography</code>.</p>
+
+      <div class="type-grid">
+        <div class="type-card">
+          <span class="type-role">Primary · Headlines &amp; CTAs</span>
+          <div class="type-specimen" style="font-family: 'Gotham', system-ui, sans-serif; font-weight: 700;">
+            The Creek
+          </div>
+          <div class="type-meta">
+            <strong>Gotham Bold</strong>
+            <span>Logo wordmark, headers, and CTA text. Upper/lowercase or all caps.</span>
+          </div>
+        </div>
+
+        <div class="type-card">
+          <span class="type-role">Secondary · Subheadings</span>
+          <div class="type-specimen" style="font-family: 'Bebas Neue Pro', system-ui, sans-serif; font-weight: 400;">
+            Life Groups
+          </div>
+          <div class="type-meta">
+            <strong>Bebas Neue Pro</strong>
+            <span>Subheadings. Upper/lowercase or all caps depending on context.</span>
+          </div>
+        </div>
+
+        <div class="type-card">
+          <span class="type-role">Body · Copy</span>
+          <div class="type-specimen" style="font-family: 'Avenir', system-ui, sans-serif; font-weight: 400; font-size: 20px; line-height: 1.5;">
+            Welcome to The Creek. We're glad you're here.
+          </div>
+          <div class="type-meta">
+            <strong>Avenir</strong>
+            <span>All body copy. Upper/lowercase only — never all caps.</span>
+          </div>
+        </div>
+
+        <div class="type-card">
+          <span class="type-role">Accent · Decorative Only</span>
+          <div class="type-specimen" style="font-family: 'Portrait Script', Georgia, serif; font-weight: 400; font-size: 36px;">
+            Welcome
+          </div>
+          <div class="type-meta">
+            <strong>Portrait Script</strong>
+            <span>Decorative accent only. Never for readable copy. Never all caps.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MINISTRIES -->
+    <section>
+      <p class="section-eyebrow">Sub-Brands</p>
+      <h2>Ministry Brands</h2>
+      <p class="section-note">Each ministry has a unique accent color that pairs with black and white. Full logo paths and color values are in <code>brand-kit.json</code> under <code>sub_brands</code>.</p>
+
+      <div class="ministry-grid">
+
+        <div class="ministry-card">
+          <div class="ministry-swatch" style="background: #598D7F;"></div>
+          <div class="ministry-body">
+            <h3>Life Groups</h3>
+            <span class="ministry-id">life-groups</span>
+            <div class="ministry-accent-row">
+              <div class="ministry-accent-dot" style="background: #598D7F;"></div>
+              <span class="ministry-accent-name">Teal</span>
+              <span class="ministry-accent-hex">#598D7F</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ministry-card">
+          <div class="ministry-swatch" style="background: #9ECDC9;"></div>
+          <div class="ministry-body">
+            <h3>Marriage + Parenting</h3>
+            <span class="ministry-id">marriage-parenting</span>
+            <div class="ministry-accent-row">
+              <div class="ministry-accent-dot" style="background: #9ECDC9;"></div>
+              <span class="ministry-accent-name">Aqua</span>
+              <span class="ministry-accent-hex">#9ECDC9</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ministry-card">
+          <div class="ministry-swatch" style="background: #919373;"></div>
+          <div class="ministry-body">
+            <h3>Men's Formation</h3>
+            <span class="ministry-id">mens-formation</span>
+            <div class="ministry-accent-row">
+              <div class="ministry-accent-dot" style="background: #919373;"></div>
+              <span class="ministry-accent-name">Olive</span>
+              <span class="ministry-accent-hex">#919373</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ministry-card">
+          <div class="ministry-swatch" style="background: #D9ACA3;"></div>
+          <div class="ministry-body">
+            <h3>Women's Formation</h3>
+            <span class="ministry-id">womens-formation</span>
+            <div class="ministry-accent-row">
+              <div class="ministry-accent-dot" style="background: #D9ACA3;"></div>
+              <span class="ministry-accent-name">Blush</span>
+              <span class="ministry-accent-hex">#D9ACA3</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ministry-card">
+          <div class="ministry-swatch" style="background: #F89B49;"></div>
+          <div class="ministry-body">
+            <h3>Outreach</h3>
+            <span class="ministry-id">outreach</span>
+            <div class="ministry-accent-row">
+              <div class="ministry-accent-dot" style="background: #F89B49;"></div>
+              <span class="ministry-accent-name">Orange</span>
+              <span class="ministry-accent-hex">#F89B49</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ministry-card">
+          <div class="ministry-swatch" style="background: #CED1D0;"></div>
+          <div class="ministry-body">
+            <h3>Safety + Security</h3>
+            <span class="ministry-id">safety-security</span>
+            <div class="ministry-accent-row">
+              <div class="ministry-accent-dot" style="background: #CED1D0;"></div>
+              <span class="ministry-accent-name">Silver</span>
+              <span class="ministry-accent-hex">#CED1D0</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="ministry-card">
+          <div class="ministry-swatch" style="background: #F8D982;"></div>
+          <div class="ministry-body">
+            <h3>Special Needs Ministry</h3>
+            <span class="ministry-id">special-needs</span>
+            <div class="ministry-accent-row">
+              <div class="ministry-accent-dot" style="background: #F8D982;"></div>
+              <span class="ministry-accent-name">Yellow</span>
+              <span class="ministry-accent-hex">#F8D982</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Indian Creek Christian Church · <a href="https://thecreek.org">thecreek.org</a> · 6430 S Franklin Rd, Indianapolis, IN 46259</p>
+  </footer>
+
+</body>
+</html>

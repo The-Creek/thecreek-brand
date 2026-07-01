@@ -1,0 +1,603 @@
+{
+  "version": "2026.06",
+  "brand": {
+    "legal_name": "Indian Creek Christian Church",
+    "name": "The Creek",
+    "website": "https://thecreek.org"
+  },
+  "locations": [
+    {
+      "type": "primary",
+      "street": "6430 S Franklin Rd",
+      "city": "Indianapolis",
+      "state": "IN",
+      "zip": "46259",
+      "country": "US",
+      "lat": 39.67521,
+      "lng": 86.02043
+    }
+  ],
+  "color_system": {
+    "palette": {
+      "primary": {
+        "name": "Black",
+        "hex": "#231F20",
+        "rgb": "35, 31, 32",
+        "cmyk": "0, 0, 0, 100",
+        "text_on": "#FFFFFF",
+        "usage": "Main brand color. Default for all text, logos, and graphic elements."
+      },
+      "secondary": {
+        "name": "White",
+        "hex": "#FFFFFF",
+        "rgb": "255, 255, 255",
+        "cmyk": "0, 0, 0, 0",
+        "text_on": "#231F20",
+        "usage": "Co-primary color. Used for logo reversal, backgrounds, and negative space."
+      },
+      "neutrals": [
+        {
+          "name": "Dark Gray",
+          "hex": "#6D6E71",
+          "rgb": "109, 110, 113",
+          "cmyk": "0, 0, 0, 70",
+          "pantone": "424 C",
+          "text_on": "#FFFFFF"
+        },
+        {
+          "name": "Medium Gray",
+          "hex": "#A7A9AC",
+          "rgb": "167, 169, 172",
+          "cmyk": "0, 0, 0, 40",
+          "pantone": "7543 C",
+          "text_on": "#231F20"
+        }
+      ],
+      "accents": [
+        {
+          "name": "Nepal",
+          "hex": "#95B1C1",
+          "rgb": "149, 177, 193",
+          "cmyk": "42, 21, 17, 0",
+          "pantone": "536 C",
+          "text_on": "#231F20"
+        },
+        {
+          "name": "Solid Pink",
+          "hex": "#984445",
+          "rgb": "152, 68, 69",
+          "cmyk": "23, 79, 63, 26",
+          "pantone": "7608 C",
+          "text_on": "#FFFFFF"
+        },
+        {
+          "name": "Patina",
+          "hex": "#598D7F",
+          "rgb": "89, 141, 127",
+          "cmyk": "68, 29, 52, 6",
+          "pantone": "625 C",
+          "text_on": "#FFFFFF"
+        },
+        {
+          "name": "Tan Hide",
+          "hex": "#F79A70",
+          "rgb": "247, 154, 112",
+          "cmyk": "0, 48, 57, 0",
+          "pantone": "163 C",
+          "text_on": "#231F20"
+        }
+      ]
+    },
+    "interface": {
+      "description": "A five-step neutral scale from lightest to darkest. Inverts symmetrically in dark mode — lightest becomes the darkest background, darkest becomes the lightest foreground.",
+      "softest": { "light": "#FFFFFF", "dark": "#231F20" },
+      "soft": { "light": "#F5F5F5", "dark": "#3A3637" },
+      "medium": { "light": "#A7A9AC", "dark": "#A7A9AC" },
+      "strong": { "light": "#6D6E71", "dark": "#D0D0D0" },
+      "strongest": { "light": "#231F20", "dark": "#FFFFFF" }
+    },
+    "semantic": {
+      "mode_behavior": "forecolor is the text or icon color for semantic states; background is the tinted surface behind it. Both provide light and dark mode values.",
+      "success": {
+        "forecolor": { "light": "#2E7D32", "dark": "#81C784" },
+        "background": { "light": "#EDF7ED", "dark": "#0A2E0B" }
+      },
+      "warning": {
+        "forecolor": { "light": "#E65100", "dark": "#FFB74D" },
+        "background": { "light": "#FFF3E0", "dark": "#2E1500" }
+      },
+      "danger": {
+        "forecolor": { "light": "#C62828", "dark": "#EF9A9A" },
+        "background": { "light": "#FDECEA", "dark": "#2D0000" }
+      },
+      "info": {
+        "forecolor": { "light": "#01579B", "dark": "#81D4FA" },
+        "background": { "light": "#E1F5FE", "dark": "#00111F" }
+      }
+    }
+  },
+  "typography": {
+    "primary": {
+      "family": "Gotham Bold",
+      "role": "Main logo font. Used for headers and CTA text.",
+      "casing": "Upper/lowercase or all caps depending on usage.",
+      "source": "self-hosted",
+      "files": {
+        "700": "fonts/Gotham Bold.otf"
+      }
+    },
+    "secondary": {
+      "family": "Bebas Neue Pro",
+      "role": "Subheadings.",
+      "casing": "Upper/lowercase or all caps depending on usage.",
+      "source": "self-hosted",
+      "files": {
+        "400": "fonts/Bebas Neue Pro Regular.ttf"
+      }
+    },
+    "body": {
+      "family": "Avenir",
+      "role": "Body copy.",
+      "casing": "Upper/lowercase only. Do not use all caps.",
+      "source": "self-hosted",
+      "files": {
+        "400": "fonts/Avenir Regular.ttf"
+      }
+    },
+    "accent": {
+      "family": "Portrait Script",
+      "role": "Decorative accent only. Never use for readable copy.",
+      "casing": "Upper/lowercase only. Never use all caps.",
+      "source": "licensed",
+      "files": "fonts/portrait-script-regular_WebFont"
+    }
+  },
+  "logos": {
+    "lockups": [
+      {
+        "type": "combination_mark_horizontal",
+        "description": "Primary full logo — icon + wordmark, horizontal layout. Preferred whenever space allows.",
+        "assets": [
+          {
+            "variant": "dark",
+            "format": "png",
+            "background": "transparent",
+            "file": "logos/__TheCreek-Logo-Main-Horizontal-Black.png"
+          },
+          {
+            "variant": "light",
+            "format": "png",
+            "background": "transparent",
+            "file": "logos/__TheCreek-Logo-Main-Horizontal-White.png"
+          }
+        ]
+      },
+      {
+        "type": "combination_mark_stacked",
+        "description": "Full logo — icon + wordmark, stacked layout. Use when horizontal space is limited.",
+        "assets": [
+          {
+            "variant": "dark",
+            "format": "png",
+            "background": "transparent",
+            "file": "logos/__TheCreek-Logo-Main-Stacked-Black.png"
+          },
+          {
+            "variant": "light",
+            "format": "png",
+            "background": "transparent",
+            "file": "logos/__TheCreek-Logo-Main-Stacked-White.png"
+          }
+        ]
+      },
+      {
+        "type": "logo_mark",
+        "description": "Icon-only submark — for avatars, favicons, and limited-space contexts where the full brand is already established.",
+        "assets": [
+          {
+            "variant": "dark",
+            "format": "png",
+            "background": "transparent",
+            "file": "logos/__TheCreek-Logo-SecondaryIcon-Black.png"
+          },
+          {
+            "variant": "light",
+            "format": "png",
+            "background": "transparent",
+            "file": "logos/__TheCreek-Logo-SecondaryIcon-White.png"
+          }
+        ]
+      },
+      {
+        "type": "secondary_horizontal",
+        "description": "Alternate logo variant — horizontal layout.",
+        "assets": [
+          {
+            "variant": "dark",
+            "format": "png",
+            "background": "transparent",
+            "file": "logos/__TheCreek-Logo-SecondaryV2-Horizontal-Black.png"
+          },
+          {
+            "variant": "light",
+            "format": "png",
+            "background": "transparent",
+            "file": "logos/__TheCreek-Logo-SecondaryV2-Horizontal-White.png"
+          }
+        ]
+      },
+      {
+        "type": "secondary_stacked",
+        "description": "Alternate logo variant — stacked layout.",
+        "assets": [
+          {
+            "variant": "dark",
+            "format": "png",
+            "background": "transparent",
+            "file": "logos/__TheCreek-Logo-SecondaryV2-Stacked-Black.png"
+          },
+          {
+            "variant": "light",
+            "format": "png",
+            "background": "transparent",
+            "file": "logos/__TheCreek-Logo-SecondaryV2-Stacked-White.png"
+          }
+        ]
+      }
+    ],
+    "rules": [
+      "Logos must only be used in black or white — no recoloring.",
+      "Use the dark (black) variant on light/white backgrounds. Use the light (white) variant on dark/black backgrounds.",
+      "The horizontal combination mark is the preferred logo whenever space allows.",
+      "Use the stacked layout only when horizontal space is limited.",
+      "Use the logo_mark (icon-only) for avatars, favicons, or small spaces where the full brand is already established in context.",
+      "Do not stretch, recolor, add effects, or distort any logo.",
+      "Maintain clear space around every logo on all sides."
+    ]
+  },
+  "sub_brands": [
+    {
+      "id": "life-groups",
+      "type": "ministry",
+      "name": "Life Groups",
+      "full_name": "Life Groups at The Creek",
+      "accent_color": {
+        "name": "Teal",
+        "hex": "#598D7F",
+        "rgb": "89, 141, 127",
+        "cmyk": "68, 29, 52, 6",
+        "pantone": "625 C",
+        "text_on": "#FFFFFF"
+      },
+      "logos": {
+        "assets": [
+          {
+            "variant": "dark",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/life-groups/__Creek-LifeGroups-Logo-FULL-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/life-groups/__Creek-LifeGroups-Logo-FULL-White.png"
+          },
+          {
+            "variant": "dark",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/life-groups/__Creek-LifeGroups-Logo-WORD-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/life-groups/__Creek-LifeGroups-Logo-WORD-White.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "marriage-parenting",
+      "type": "ministry",
+      "name": "Marriage + Parenting",
+      "full_name": "Marriage + Parenting at The Creek",
+      "accent_color": {
+        "name": "Aqua",
+        "hex": "#9ECDC9",
+        "rgb": "158, 205, 201",
+        "cmyk": "38, 5, 22, 0",
+        "text_on": "#231F20"
+      },
+      "logos": {
+        "assets": [
+          {
+            "variant": "dark",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/marriage-parenting/__Creek-Marriage+Parenting-Logo-FULL-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/marriage-parenting/__Creek-Marriage+Parenting-Logo-FULL-White.png"
+          },
+          {
+            "variant": "dark",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/marriage-parenting/__Creek-Marriage+Parenting-WORD-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/marriage-parenting/__Creek-Marriage+Parenting-WORD-White.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "mens-formation",
+      "type": "ministry",
+      "name": "Men's Formation",
+      "full_name": "Men's Formation at The Creek",
+      "accent_color": {
+        "name": "Olive",
+        "hex": "#919373",
+        "rgb": "145, 147, 115",
+        "cmyk": "45, 33, 60, 5",
+        "text_on": "#FFFFFF"
+      },
+      "logos": {
+        "assets": [
+          {
+            "variant": "dark",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/mens-formation/__Creek-MensFormation-Logo-FULL-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/mens-formation/__Creek-MensFormation-Logo-FULL-White.png"
+          },
+          {
+            "variant": "dark",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/mens-formation/__Creek-MensFormation-WORD-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/mens-formation/__Creek-MensFormation-WORD-White.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "womens-formation",
+      "type": "ministry",
+      "name": "Women's Formation",
+      "full_name": "Women's Formation at The Creek",
+      "accent_color": {
+        "name": "Blush",
+        "hex": "#D9ACA3",
+        "rgb": "217, 172, 163",
+        "cmyk": "14, 34, 30, 0",
+        "text_on": "#231F20"
+      },
+      "logos": {
+        "assets": [
+          {
+            "variant": "dark",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/womens-formation/__Creek-WomensFormation-Logo-FULL-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/womens-formation/__Creek-WomensFormation-Logo-FULL-White.png"
+          },
+          {
+            "variant": "dark",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/womens-formation/__Creek-WomensFormation-WORD-FULL-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/womens-formation/__Creek-WomensFormation-WORD-FULL-White.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "outreach",
+      "type": "ministry",
+      "name": "Outreach",
+      "full_name": "Outreach at The Creek",
+      "accent_color": {
+        "name": "Orange",
+        "hex": "#F89B49",
+        "rgb": "248, 155, 73",
+        "cmyk": "0, 47, 80, 0",
+        "text_on": "#231F20"
+      },
+      "logos": {
+        "assets": [
+          {
+            "variant": "dark",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/outreach/__Creek-Outreach-Logo-FULL-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/outreach/__Creek-Outreach-Logo-FULL-White.png"
+          },
+          {
+            "variant": "dark",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/outreach/__Creek-Outreach-Logo-WORD-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/outreach/__Creek-Outreach-Logo-WORD-White.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "safety-security",
+      "type": "ministry",
+      "name": "Safety + Security",
+      "full_name": "Safety + Security at The Creek",
+      "accent_color": {
+        "name": "Silver",
+        "hex": "#CED1D0",
+        "rgb": "206, 209, 208",
+        "cmyk": "19, 13, 15, 0",
+        "text_on": "#231F20"
+      },
+      "logos": {
+        "assets": [
+          {
+            "variant": "dark",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/safety-security/__Creek-Safety+Security-Logo-FULL-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/safety-security/__Creek-Safety+Security-Logo-FULL-White.png"
+          },
+          {
+            "variant": "dark",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/safety-security/__Creek-Safety+Security-WORD-FULL-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/safety-security/__Creek-Safety+Security-WORD-FULL-White.png"
+          }
+        ]
+      }
+    },
+    {
+      "id": "special-needs",
+      "type": "ministry",
+      "name": "Special Needs Ministry",
+      "full_name": "Special Needs Ministry at The Creek",
+      "accent_color": {
+        "name": "Yellow",
+        "hex": "#F8D982",
+        "rgb": "248, 217, 130",
+        "cmyk": "3, 13, 58, 0",
+        "text_on": "#231F20"
+      },
+      "logos": {
+        "assets": [
+          {
+            "variant": "dark",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/special-needs/__Creek-SpecialNeeds-Logo-FULL-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "combination_mark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/special-needs/__Creek-SpecialNeeds-Logo-FULL-White.png"
+          },
+          {
+            "variant": "dark",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/special-needs/__Creek-SpecialNeeds-WORD-FULL-Black.png"
+          },
+          {
+            "variant": "light",
+            "layout": "wordmark",
+            "format": "png",
+            "background": "transparent",
+            "file": "ministries/special-needs/__Creek-SpecialNeeds-WORD-FULL-White.png"
+          }
+        ]
+      }
+    }
+  ],
+  "voice": {
+    "summary": "Warm, welcoming, and clear. Grounded in faith without being exclusive. Conversational and human — never stiff, corporate, or overly religious in tone.",
+    "tone": [
+      "warm",
+      "welcoming",
+      "clear",
+      "authentic",
+      "hopeful",
+      "community-focused"
+    ],
+    "avoid": [
+      "overly formal or corporate language",
+      "insider church jargon without context",
+      "language that feels exclusive or unwelcoming to newcomers"
+    ],
+    "example_phrases": []
+  },
+  "rules": [
+    "This brand-kit.json is the single source of truth for The Creek brand. AI agents must load and follow these paths, colors, and rules.",
+    "Black and white are the primary brand colors — default to these for all generated content. Accent and secondary colors are supporting use only.",
+    "Logos must only appear in black or white. Use the dark (black) variant on light backgrounds; the light (white) variant on dark backgrounds.",
+    "The horizontal combination mark is always preferred. Use stacked only when horizontal space is limited.",
+    "Font hierarchy: Gotham Bold for headlines/CTAs, Bebas Neue Pro for subheadings, Avenir for body copy. Portrait Script is decorative only — never use for readable copy.",
+    "For ministry-specific designs, use the ministry's accent_color as the supporting color alongside black and white.",
+    "For external-facing materials, always pair ministry logos with The Creek logo mark. For internal communications, The Creek logo mark is optional.",
+    "When in doubt, include The Creek logo mark."
+  ]
+}

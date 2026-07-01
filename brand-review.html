@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Creek — Brand Review</title>
+  <style>
+    /* === FONTS === */
+    @font-face { font-family: 'Gotham'; src: url('fonts/Gotham Bold.otf') format('opentype'); font-weight: 700; font-style: normal; }
+    @font-face { font-family: 'Bebas Neue Pro'; src: url('fonts/Bebas Neue Pro Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; }
+    @font-face { font-family: 'Avenir'; src: url('fonts/Avenir Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; }
+    @font-face { font-family: 'Portrait Script'; src: url('fonts/portrait-script-regular_WebFont.ttf') format('truetype'); font-weight: 400; font-style: normal; }
+
+    /* === RESET === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #F4F5F7; color: #231F20; line-height: 1.5; }
+
+    /* === NAV === */
+    nav { position: sticky; top: 0; z-index: 100; background: #231F20; border-bottom: 3px solid #598D7F; display: flex; align-items: center; padding: 0 48px; height: 52px; }
+    .nav-brand { color: #fff; font-family: 'Gotham', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.05em; margin-right: 24px; }
+    nav a { color: #A7A9AC; font-size: 12px; letter-spacing: 0.07em; text-transform: uppercase; text-decoration: none; padding: 0 16px; height: 100%; display: flex; align-items: center; transition: color 0.15s; }
+    nav a:hover { color: #fff; }
+
+    /* === PAGE HEADER === */
+    .page-header { background: #231F20; padding: 64px 48px 48px; border-bottom: 1px solid #3A3637; }
+    .page-header h1 { font-family: 'Gotham', sans-serif; font-weight: 700; font-size: 36px; color: #fff; letter-spacing: -0.01em; }
+    .page-header p { color: #A7A9AC; font-size: 14px; margin-top: 10px; max-width: 560px; }
+    .page-header .meta { display: flex; gap: 40px; margin-top: 28px; flex-wrap: wrap; }
+    .meta-item { font-size: 10px; color: #6D6E71; letter-spacing: 0.07em; text-transform: uppercase; }
+    .meta-item span { display: block; color: #A7A9AC; font-size: 13px; letter-spacing: 0; text-transform: none; margin-top: 3px; }
+
+    /* === LAYOUT === */
+    main { max-width: 1200px; margin: 0 auto; padding: 0 48px 80px; }
+    section { padding-top: 64px; }
+    section + section { border-top: 1px solid #E0E2E6; margin-top: 16px; }
+
+    /* === SECTION HEADINGS === */
+    .section-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #598D7F; font-weight: 600; margin-bottom: 6px; }
+    h2 { font-family: 'Gotham', sans-serif; font-weight: 700; font-size: 28px; color: #231F20; margin-bottom: 8px; }
+    h3.sub-heading { font-family: 'Gotham', sans-serif; font-weight: 700; font-size: 15px; color: #231F20; margin: 32px 0 8px; }
+    .note { font-size: 13px; color: #6D6E71; margin-bottom: 20px; max-width: 680px; }
+    .note code { font-family: 'Courier New', monospace; background: #E0E2E6; padding: 1px 5px; border-radius: 3px; font-size: 12px; color: #231F20; }
+
+    /* === COLOR SWATCHES === */
+    .swatch-row { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 32px; }
+    .swatch { display: flex; flex-direction: column; width: 160px; }
+    .swatch-chip { height: 80px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); }
+    .swatch-chip.white-chip { border: 1px solid #D8D9DA; }
+    .swatch-label { margin-top: 10px; }
+    .swatch-name { font-size: 13px; font-weight: 600; color: #231F20; }
+    .swatch-hex { font-size: 12px; color: #6D6E71; font-family: 'Courier New', monospace; margin-top: 2px; }
+    .swatch-pantone { font-size: 11px; color: #A7A9AC; margin-top: 1px; }
+
+    /* === INTERFACE SCALE === */
+    .interface-grid { display: flex; gap: 8px; margin-bottom: 32px; }
+    .interface-cell { flex: 1; height: 56px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.06); display: flex; align-items: flex-end; padding: 6px 8px; }
+    .interface-cell-label { font-size: 10px; letter-spacing: 0.04em; color: #6D6E71; }
+    .interface-cell-label.light { color: #A7A9AC; }
+    .interface-cell-label.white { color: #FDFDFD; }
+
+    /* === SEMANTIC COLORS === */
+    .semantic-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+    .semantic-card { border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08); }
+    .semantic-header { padding: 14px 16px; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; }
+    .semantic-body { background: #fff; padding: 16px; }
+    .semantic-swatch { height: 36px; border-radius: 4px; }
+    .semantic-hex { font-size: 11px; font-family: 'Courier New', monospace; color: #6D6E71; margin-top: 6px; }
+    .semantic-mode { font-size: 10px; color: #A7A9AC; margin-top: 2px; margin-bottom: 12px; }
+
+    /* === ASSET GRID === */
+    .asset-group { margin-bottom: 40px; }
+    .asset-group-title { font-size: 14px; font-weight: 600; color: #231F20; margin-bottom: 4px; }
+    .asset-group-desc { font-size: 13px; color: #6D6E71; margin-bottom: 16px; }
+    .asset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    .asset-card { background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #E0E2E6; }
+    .asset-preview { display: flex; align-items: center; justify-content: center; padding: 24px; min-height: 120px; }
+    .asset-preview img { max-width: 100%; max-height: 80px; object-fit: contain; }
+    .asset-meta { padding: 12px 16px; border-top: 1px solid #F0F1F3; }
+    .asset-meta-title { font-size: 12px; font-weight: 600; color: #231F20; }
+    .asset-meta-path { font-size: 10px; font-family: 'Courier New', monospace; color: #A7A9AC; margin-top: 3px; word-break: break-all; }
+    .asset-badges { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+    .asset-badge { font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 600; letter-spacing: 0.03em; }
+    .badge-dark { background: #231F20; color: #fff; }
+    .badge-light { background: #E0E2E6; color: #231F20; }
+    .badge-png { background: #EBF3F0; color: #598D7F; }
+
+    /* === BACKGROUND HELPERS === */
+    .bg-dark { background: #231F20; }
+    .bg-light { background: #FDFDFD; }
+    .bg-checker { background-image: linear-gradient(45deg, #DDD 25%, transparent 25%), linear-gradient(-45deg, #DDD 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #DDD 75%), linear-gradient(-45deg, transparent 75%, #DDD 75%); background-size: 16px 16px; background-position: 0 0, 0 8px, 8px -8px, -8px 0; background-color: #F4F5F7; }
+    .bg-checker-light { background-image: linear-gradient(45deg, #EEE 25%, transparent 25%), linear-gradient(-45deg, #EEE 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #EEE 75%), linear-gradient(-45deg, transparent 75%, #EEE 75%); background-size: 16px 16px; background-position: 0 0, 0 8px, 8px -8px, -8px 0; background-color: #FAFAFA; }
+
+    /* === TYPOGRAPHY === */
+    .type-grid { background: #fff; border-radius: 8px; border: 1px solid #E0E2E6; overflow: hidden; margin-bottom: 16px; }
+    .type-row { display: flex; align-items: baseline; gap: 24px; padding: 18px 24px; border-bottom: 1px solid #F0F1F3; }
+    .type-row:last-child { border-bottom: none; }
+    .type-label { font-size: 11px; color: #A7A9AC; letter-spacing: 0.04em; min-width: 160px; flex-shrink: 0; }
+    .type-sample { font-size: 28px; color: #231F20; line-height: 1.2; }
+    .char-set { background: #fff; border-radius: 8px; border: 1px solid #E0E2E6; padding: 24px; }
+    .char-set-label { font-size: 11px; color: #A7A9AC; margin-bottom: 12px; letter-spacing: 0.05em; text-transform: uppercase; }
+    .char-set-text { font-size: 16px; color: #231F20; line-height: 1.9; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="nav-brand">The Creek</span>
+    <a href="#colors">Colors</a>
+    <a href="#logos">Logos</a>
+    <a href="#ministries">Ministries</a>
+    <a href="#typography">Typography</a>
+  </nav>
+
+  <div class="page-header">
+    <h1>Brand Review</h1>
+    <p>Visual reference for The Creek's brand assets, colors, typography, and ministry sub-brands. For use by staff, designers, and AI tools.</p>
+    <div class="meta">
+      <div class="meta-item">Brand<span>The Creek</span></div>
+      <div class="meta-item">Legal Name<span>Indian Creek Christian Church</span></div>
+      <div class="meta-item">Version<span>2026.06</span></div>
+      <div class="meta-item">Location<span>Indianapolis, IN</span></div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===== COLORS ===== -->
+    <section id="colors">
+      <p class="section-label">Colors</p>
+      <h2>Color System</h2>
+      <p class="note">Black and white are the primary brand colors. Every design starts here. Accent colors are used sparingly to support — never replace — the black and white foundation.</p>
+
+      <h3 class="sub-heading">Primary</h3>
+      <div class="swatch-row">
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#231F20;"></div>
+          <div class="swatch-label">
+            <div class="swatch-name">Black</div>
+            <div class="swatch-hex">#231F20</div>
+            <div class="swatch-pantone">Pantone Black C</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip white-chip" style="background:#FFFFFF;"></div>
+          <div class="swatch-label">
+            <div class="swatch-name">White</div>
+            <div class="swatch-hex">#FFFFFF</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Neutrals</h3>
+      <div class="swatch-row">
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#3A3637;"></div>
+          <div class="swatch-label">
+            <div class="swatch-name">Black Soft</div>
+            <div class="swatch-hex">#3A3637</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#6D6E71;"></div>
+          <div class="swatch-label">
+            <div class="swatch-name">Dark Gray</div>
+            <div class="swatch-hex">#6D6E71</div>
+            <div class="swatch-pantone">Pantone 424 C</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#A7A9AC;"></div>
+          <div class="swatch-label">
+            <div class="swatch-name">Medium Gray</div>
+            <div class="swatch-hex">#A7A9AC</div>
+            <div class="swatch-pantone">Pantone 7543 C</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Accents</h3>
+      <div class="swatch-row">
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#95B1C1;"></div>
+          <div class="swatch-label">
+            <div class="swatch-name">Nepal</div>
+            <div class="swatch-hex">#95B1C1</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#984445;"></div>
+          <div class="swatch-label">
+            <div class="swatch-name">Solid Pink</div>
+            <div class="swatch-hex">#984445</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#598D7F;"></div>
+          <div class="swatch-label">
+            <div class="swatch-name">Patina</div>
+            <div class="swatch-hex">#598D7F</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-chip" style="background:#F79A70;"></div>
+          <div class="swatch-label">
+            <div class="swatch-name">Tan Hide</div>
+            <div class="swatch-hex">#F79A70</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Interface Scale</h3>
+      <p class="note">5-step neutral scale for UI surfaces and text. Inverts symmetrically in dark mode.</p>
+      <div class="interface-grid">
+        <div class="interface-cell" style="background:#FDFDFD;">
+          <span class="interface-cell-label">Softest</span>
+        </div>
+        <div class="interface-cell" style="background:#F4F5F7;">
+          <span class="interface-cell-label">Soft</span>
+        </div>
+        <div class="interface-cell" style="background:#E0E2E6;">
+          <span class="interface-cell-label">Base</span>
+        </div>
+        <div class="interface-cell" style="background:#A7A9AC;">
+          <span class="interface-cell-label light">Strong</span>
+        </div>
+        <div class="interface-cell" style="background:#231F20;">
+          <span class="interface-cell-label white">Strongest</span>
+        </div>
+      </div>
+
+      <h3 class="sub-heading">Semantic Colors</h3>
+      <p class="note">Standard success, warning, danger, and info states for UI and communication contexts.</p>
+      <div class="semantic-grid">
+        <div class="semantic-card">
+          <div class="semantic-header" style="background:#D1FAE5;color:#065F46;">Success</div>
+          <div class="semantic-body">
+            <div class="semantic-swatch" style="background:#10B981;"></div>
+            <div class="semantic-hex">#10B981</div>
+            <div class="semantic-mode">Foreground — Light mode</div>
+            <div class="semantic-swatch" style="background:#D1FAE5;border:1px solid #A7F3D0;"></div>
+            <div class="semantic-hex">#D1FAE5</div>
+            <div class="semantic-mode">Background — Light mode</div>
+          </div>
+        </div>
+        <div class="semantic-card">
+          <div class="semantic-header" style="background:#FEF3C7;color:#92400E;">Warning</div>
+          <div class="semantic-body">
+            <div class="semantic-swatch" style="background:#F59E0B;"></div>
+            <div class="semantic-hex">#F59E0B</div>
+            <div class="semantic-mode">Foreground — Light mode</div>
+            <div class="semantic-swatch" style="background:#FEF3C7;border:1px solid #FDE68A;"></div>
+            <div class="semantic-hex">#FEF3C7</div>
+            <div class="semantic-mode">Background — Light mode</div>
+          </div>
+        </div>
+        <div class="semantic-card">
+          <div class="semantic-header" style="background:#FEE2E2;color:#991B1B;">Danger</div>
+          <div class="semantic-body">
+            <div class="semantic-swatch" style="background:#EF4444;"></div>
+            <div class="semantic-hex">#EF4444</div>
+            <div class="semantic-mode">Foreground — Light mode</div>
+            <div class="semantic-swatch" style="background:#FEE2E2;border:1px solid #FECACA;"></div>
+            <div class="semantic-hex">#FEE2E2</div>
+            <div class="semantic-mode">Background — Light mode</div>
+          </div>
+        </div>
+        <div class="semantic-card">
+          <div class="semantic-header" style="background:#DBEAFE;color:#1E40AF;">Info</div>
+          <div class="semantic-body">
+            <div class="semantic-swatch" style="background:#3B82F6;"></div>
+            <div class="semantic-hex">#3B82F6</div>
+            <div class="semantic-mode">Foreground — Light mode</div>
+            <div class="semantic-swatch" style="background:#DBEAFE;border:1px solid #BFDBFE;"></div>
+            <div class="semantic-hex">#DBEAFE</div>
+            <div class="semantic-mode">Background — Light mode</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LOGOS ===== -->
+    <section id="logos">
+      <p class="section-label">Logos</p>
+      <h2>Logo Lockups</h2>
+      <p class="note">Light variants (white logo) shown on black. Dark variants (black logo) shown on checkerboard. Logos are black or white only — no recoloring.</p>
+
+      <!-- Combination Mark — Horizontal -->
+      <div class="asset-group">
+        <div class="asset-group-title">Combination Mark — Horizontal</div>
+        <div class="asset-group-desc">Primary logo for all external marketing. Preferred in all contexts unless horizontal space is constrained.</div>
+        <div class="asset-grid">
+          <div class="asset-card">
+            <div class="asset-preview bg-dark">
+              <img src="logos/__TheCreek-Logo-Main-Horizontal-White.png" loading="lazy" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-meta-title">Horizontal — Light (White)</div>
+              <div class="asset-meta-path">logos/__TheCreek-Logo-Main-Horizontal-White.png</div>
+              <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+            </div>
+          </div>
+          <div class="asset-card">
+            <div class="asset-preview bg-checker-light">
+              <img src="logos/__TheCreek-Logo-Main-Horizontal-Black.png" loading="lazy" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-meta-title">Horizontal — Dark (Black)</div>
+              <div class="asset-meta-path">logos/__TheCreek-Logo-Main-Horizontal-Black.png</div>
+              <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Combination Mark — Stacked -->
+      <div class="asset-group">
+        <div class="asset-group-title">Combination Mark — Stacked</div>
+        <div class="asset-group-desc">Use only when horizontal space is limited. Never the default.</div>
+        <div class="asset-grid">
+          <div class="asset-card">
+            <div class="asset-preview bg-dark">
+              <img src="logos/__TheCreek-Logo-Main-Stacked-White.png" loading="lazy" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-meta-title">Stacked — Light (White)</div>
+              <div class="asset-meta-path">logos/__TheCreek-Logo-Main-Stacked-White.png</div>
+              <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+            </div>
+          </div>
+          <div class="asset-card">
+            <div class="asset-preview bg-checker-light">
+              <img src="logos/__TheCreek-Logo-Main-Stacked-Black.png" loading="lazy" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-meta-title">Stacked — Dark (Black)</div>
+              <div class="asset-meta-path">logos/__TheCreek-Logo-Main-Stacked-Black.png</div>
+              <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logo Mark (Icon Only) -->
+      <div class="asset-group">
+        <div class="asset-group-title">Logo Mark (Icon Only)</div>
+        <div class="asset-group-desc">For avatars, favicons, app icons, and contexts where the full wordmark would be too small or where The Creek brand is already established.</div>
+        <div class="asset-grid">
+          <div class="asset-card">
+            <div class="asset-preview bg-dark">
+              <img src="logos/__TheCreek-Logo-SecondaryIcon-White.png" loading="lazy" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-meta-title">Logo Mark — Light (White)</div>
+              <div class="asset-meta-path">logos/__TheCreek-Logo-SecondaryIcon-White.png</div>
+              <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+            </div>
+          </div>
+          <div class="asset-card">
+            <div class="asset-preview bg-checker-light">
+              <img src="logos/__TheCreek-Logo-SecondaryIcon-Black.png" loading="lazy" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-meta-title">Logo Mark — Dark (Black)</div>
+              <div class="asset-meta-path">logos/__TheCreek-Logo-SecondaryIcon-Black.png</div>
+              <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary V2 — Horizontal -->
+      <div class="asset-group">
+        <div class="asset-group-title">Secondary V2 — Horizontal</div>
+        <div class="asset-group-desc">Alternate horizontal variant.</div>
+        <div class="asset-grid">
+          <div class="asset-card">
+            <div class="asset-preview bg-dark">
+              <img src="logos/__TheCreek-Logo-SecondaryV2-Horizontal-White.png" loading="lazy" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-meta-title">Secondary V2 Horizontal — Light</div>
+              <div class="asset-meta-path">logos/__TheCreek-Logo-SecondaryV2-Horizontal-White.png</div>
+              <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+            </div>
+          </div>
+          <div class="asset-card">
+            <div class="asset-preview bg-checker-light">
+              <img src="logos/__TheCreek-Logo-SecondaryV2-Horizontal-Black.png" loading="lazy" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-meta-title">Secondary V2 Horizontal — Dark</div>
+              <div class="asset-meta-path">logos/__TheCreek-Logo-SecondaryV2-Horizontal-Black.png</div>
+              <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary V2 — Stacked -->
+      <div class="asset-group">
+        <div class="asset-group-title">Secondary V2 — Stacked</div>
+        <div class="asset-group-desc">Alternate stacked variant.</div>
+        <div class="asset-grid">
+          <div class="asset-card">
+            <div class="asset-preview bg-dark">
+              <img src="logos/__TheCreek-Logo-SecondaryV2-Stacked-White.png" loading="lazy" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-meta-title">Secondary V2 Stacked — Light</div>
+              <div class="asset-meta-path">logos/__TheCreek-Logo-SecondaryV2-Stacked-White.png</div>
+              <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+            </div>
+          </div>
+          <div class="asset-card">
+            <div class="asset-preview bg-checker-light">
+              <img src="logos/__TheCreek-Logo-SecondaryV2-Stacked-Black.png" loading="lazy" />
+            </div>
+            <div class="asset-meta">
+              <div class="asset-meta-title">Secondary V2 Stacked — Dark</div>
+              <div class="asset-meta-path">logos/__TheCreek-Logo-SecondaryV2-Stacked-Black.png</div>
+              <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MINISTRIES ===== -->
+    <section id="ministries">
+      <p class="section-label">Ministries</p>
+      <h2>Ministry Sub-Brands</h2>
+      <p class="note">Each ministry has a unique accent color and its own logo extending The Creek brand. For external materials, pair ministry logos with The Creek logo mark. When in doubt, include it.</p>
+
+      <!-- Life Groups -->
+      <h3 class="sub-heading">Life Groups</h3>
+      <p class="note">Accent: Teal — <code>#598D7F</code> (Pantone 625 C)</p>
+      <div class="asset-grid" style="margin-bottom:40px;">
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/life-groups/__Creek-LifeGroups-Logo-FULL-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Light</div>
+            <div class="asset-meta-path">ministries/life-groups/__Creek-LifeGroups-Logo-FULL-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/life-groups/__Creek-LifeGroups-Logo-FULLv1-01.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Dark</div>
+            <div class="asset-meta-path">ministries/life-groups/__Creek-LifeGroups-Logo-FULLv1-01.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/life-groups/__Creek-LifeGroups-Logo-WORD-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Light</div>
+            <div class="asset-meta-path">ministries/life-groups/__Creek-LifeGroups-Logo-WORD-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/life-groups/__Creek-LifeGroups-Logo-WORDv1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Dark</div>
+            <div class="asset-meta-path">ministries/life-groups/__Creek-LifeGroups-Logo-WORDv1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marriage & Parenting -->
+      <h3 class="sub-heading">Marriage &amp; Parenting</h3>
+      <p class="note">Accent: Aqua — <code>#9ECDC9</code></p>
+      <div class="asset-grid" style="margin-bottom:40px;">
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/marriage-parenting/__Creek-Marriage+Parenting-Logo-FULL-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Light</div>
+            <div class="asset-meta-path">ministries/marriage-parenting/__Creek-Marriage+Parenting-Logo-FULL-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/marriage-parenting/__Creek-Marriage+Parenting-Logo-FULLv2.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Dark</div>
+            <div class="asset-meta-path">ministries/marriage-parenting/__Creek-Marriage+Parenting-Logo-FULLv2.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/marriage-parenting/__Creek-Marriage+Parenting-WORD-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Light</div>
+            <div class="asset-meta-path">ministries/marriage-parenting/__Creek-Marriage+Parenting-WORD-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/marriage-parenting/__Creek-Marriage+Parenting-WORD-v1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Dark</div>
+            <div class="asset-meta-path">ministries/marriage-parenting/__Creek-Marriage+Parenting-WORD-v1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Men's Formation -->
+      <h3 class="sub-heading">Men's Formation</h3>
+      <p class="note">Accent: Olive — <code>#919373</code></p>
+      <div class="asset-grid" style="margin-bottom:40px;">
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/mens-formation/__Creek-MensFormation-Logo-FULL-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Light</div>
+            <div class="asset-meta-path">ministries/mens-formation/__Creek-MensFormation-Logo-FULL-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/mens-formation/__Creek-MensFormation-Logo-FULLv1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Dark</div>
+            <div class="asset-meta-path">ministries/mens-formation/__Creek-MensFormation-Logo-FULLv1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/mens-formation/__Creek-MensFormation-WORD-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Light</div>
+            <div class="asset-meta-path">ministries/mens-formation/__Creek-MensFormation-WORD-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/mens-formation/__Creek-MensFormation-WORD-v1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Dark</div>
+            <div class="asset-meta-path">ministries/mens-formation/__Creek-MensFormation-WORD-v1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Women's Formation -->
+      <h3 class="sub-heading">Women's Formation</h3>
+      <p class="note">Accent: Blush — <code>#D9ACA3</code></p>
+      <div class="asset-grid" style="margin-bottom:40px;">
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/womens-formation/__Creek-WomensFormation-Logo-FULL-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Light</div>
+            <div class="asset-meta-path">ministries/womens-formation/__Creek-WomensFormation-Logo-FULL-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/womens-formation/__Creek-WomensFormation-Logo-FULLv1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Dark</div>
+            <div class="asset-meta-path">ministries/womens-formation/__Creek-WomensFormation-Logo-FULLv1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/womens-formation/__Creek-WomensFormation-WORD-FULL-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Light</div>
+            <div class="asset-meta-path">ministries/womens-formation/__Creek-WomensFormation-WORD-FULL-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/womens-formation/__Creek-WomensFormation-WORD-FULLv1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Dark</div>
+            <div class="asset-meta-path">ministries/womens-formation/__Creek-WomensFormation-WORD-FULLv1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outreach -->
+      <h3 class="sub-heading">Outreach</h3>
+      <p class="note">Accent: Orange — <code>#F89B49</code></p>
+      <div class="asset-grid" style="margin-bottom:40px;">
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/outreach/__Creek-Outreach-Logo-FULL-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Light</div>
+            <div class="asset-meta-path">ministries/outreach/__Creek-Outreach-Logo-FULL-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/outreach/__Creek-Outreach-Logo-FULLv1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Dark</div>
+            <div class="asset-meta-path">ministries/outreach/__Creek-Outreach-Logo-FULLv1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/outreach/__Creek-Outreach-Logo-WORD-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Light</div>
+            <div class="asset-meta-path">ministries/outreach/__Creek-Outreach-Logo-WORD-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/outreach/__Creek-Outreach-Logo-WORDv1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Dark</div>
+            <div class="asset-meta-path">ministries/outreach/__Creek-Outreach-Logo-WORDv1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Safety & Security -->
+      <h3 class="sub-heading">Safety &amp; Security</h3>
+      <p class="note">Accent: Silver — <code>#CED1D0</code></p>
+      <div class="asset-grid" style="margin-bottom:40px;">
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/safety-security/__Creek-Safety+Security-Logo-FULL-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Light</div>
+            <div class="asset-meta-path">ministries/safety-security/__Creek-Safety+Security-Logo-FULL-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/safety-security/__Creek-Safety+Security-Logo-FULLv1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Dark</div>
+            <div class="asset-meta-path">ministries/safety-security/__Creek-Safety+Security-Logo-FULLv1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/safety-security/__Creek-Safety+Security-WORD-FULL-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Light</div>
+            <div class="asset-meta-path">ministries/safety-security/__Creek-Safety+Security-WORD-FULL-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/safety-security/__Creek-Safety+Security-WORD-FULLv1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Dark</div>
+            <div class="asset-meta-path">ministries/safety-security/__Creek-Safety+Security-WORD-FULLv1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Special Needs -->
+      <h3 class="sub-heading">Special Needs</h3>
+      <p class="note">Accent: Yellow — <code>#F8D982</code></p>
+      <div class="asset-grid" style="margin-bottom:40px;">
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/special-needs/__Creek-SpecialNeeds-Logo-FULL-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Light</div>
+            <div class="asset-meta-path">ministries/special-needs/__Creek-SpecialNeeds-Logo-FULL-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/special-needs/__Creek-SpecialNeeds-Logo-FULLv1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Combination Mark — Dark</div>
+            <div class="asset-meta-path">ministries/special-needs/__Creek-SpecialNeeds-Logo-FULLv1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-dark">
+            <img src="ministries/special-needs/__Creek-SpecialNeeds-WORD-FULL-White.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Light</div>
+            <div class="asset-meta-path">ministries/special-needs/__Creek-SpecialNeeds-WORD-FULL-White.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-light">Light</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+        <div class="asset-card">
+          <div class="asset-preview bg-checker-light">
+            <img src="ministries/special-needs/__Creek-SpecialNeeds-WORD-FULLv1.png" loading="lazy" />
+          </div>
+          <div class="asset-meta">
+            <div class="asset-meta-title">Wordmark — Dark</div>
+            <div class="asset-meta-path">ministries/special-needs/__Creek-SpecialNeeds-WORD-FULLv1.png</div>
+            <div class="asset-badges"><span class="asset-badge badge-dark">Dark</span><span class="asset-badge badge-png">PNG</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TYPOGRAPHY ===== -->
+    <section id="typography">
+      <p class="section-label">Typography</p>
+      <h2>Typefaces</h2>
+
+      <!-- Gotham Bold -->
+      <h3 class="sub-heading">Gotham Bold — Primary</h3>
+      <p class="note">Used for the logo wordmark, headlines, and CTAs. Upper/lowercase or all caps depending on context.</p>
+      <div class="type-grid">
+        <div class="type-row">
+          <div class="type-label">700 / Bold</div>
+          <div class="type-sample" style="font-family:'Gotham',sans-serif;font-weight:700;">All Are Welcome Here</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">700 / Bold — All Caps</div>
+          <div class="type-sample" style="font-family:'Gotham',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;font-size:22px;">All Are Welcome Here</div>
+        </div>
+      </div>
+      <div class="char-set">
+        <div class="char-set-label">Character Set — Bold 700</div>
+        <div class="char-set-text" style="font-family:'Gotham',sans-serif;font-weight:700;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 !@#$%&amp;*()[]{}</div>
+      </div>
+
+      <!-- Bebas Neue Pro -->
+      <h3 class="sub-heading" style="margin-top:48px;">Bebas Neue Pro — Secondary</h3>
+      <p class="note">Used for subheadings. Upper/lowercase or all caps depending on context.</p>
+      <div class="type-grid">
+        <div class="type-row">
+          <div class="type-label">400 / Regular</div>
+          <div class="type-sample" style="font-family:'Bebas Neue Pro',sans-serif;font-weight:400;">Sunday Experience — 9am &amp; 11am</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">400 / Regular — All Caps</div>
+          <div class="type-sample" style="font-family:'Bebas Neue Pro',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:0.05em;">Sunday Experience — 9am &amp; 11am</div>
+        </div>
+      </div>
+      <div class="char-set">
+        <div class="char-set-label">Character Set — Regular 400</div>
+        <div class="char-set-text" style="font-family:'Bebas Neue Pro',sans-serif;font-weight:400;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 !@#$%&amp;*()[]{}</div>
+      </div>
+
+      <!-- Avenir -->
+      <h3 class="sub-heading" style="margin-top:48px;">Avenir — Body</h3>
+      <p class="note">Used for all body copy. Upper/lowercase only — never all caps.</p>
+      <div class="type-grid">
+        <div class="type-row">
+          <div class="type-label">400 / Regular</div>
+          <div class="type-sample" style="font-family:'Avenir',sans-serif;font-weight:400;font-size:22px;">We believe every person matters to God.</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">400 / Regular — Body</div>
+          <div class="type-sample" style="font-family:'Avenir',sans-serif;font-weight:400;font-size:15px;color:#6D6E71;line-height:1.6;">The Creek is a church in Indianapolis, Indiana where people of all backgrounds can experience the love of God and find their place in community.</div>
+        </div>
+      </div>
+      <div class="char-set">
+        <div class="char-set-label">Character Set — Regular 400</div>
+        <div class="char-set-text" style="font-family:'Avenir',sans-serif;font-weight:400;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 !@#$%&amp;*()[]{}</div>
+      </div>
+
+      <!-- Portrait Script -->
+      <h3 class="sub-heading" style="margin-top:48px;">Portrait Script — Accent</h3>
+      <p class="note">Decorative use only. Never use for readable body copy. Never all caps.</p>
+      <div class="type-grid">
+        <div class="type-row">
+          <div class="type-label">400 / Regular</div>
+          <div class="type-sample" style="font-family:'Portrait Script',Georgia,serif;font-weight:400;font-size:44px;">Welcome Home</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">400 / Regular — Smaller</div>
+          <div class="type-sample" style="font-family:'Portrait Script',Georgia,serif;font-weight:400;font-size:30px;">The Creek</div>
+        </div>
+      </div>
+      <div class="char-set">
+        <div class="char-set-label">Character Set — Regular 400</div>
+        <div class="char-set-text" style="font-family:'Portrait Script',Georgia,serif;font-weight:400;font-size:20px;line-height:2;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="background:#231F20;color:#6D6E71;padding:24px 48px;font-size:11px;letter-spacing:0.04em;text-align:center;border-top:2px solid #598D7F;">
+    The Creek Brand Review &bull; brand-kit.json v2026.06 &bull; For human review only
+  </footer>
+
+</body>
+</html>
